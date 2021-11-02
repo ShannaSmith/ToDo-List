@@ -11,26 +11,47 @@ function App(){
     {
       text: 'build todo app',
       isCompleted: false,
-    }        
+    },
+    {
+      text: 'build ghost web app using React',
+      isCompleted: false,
+    },  
+    {
+      text: 'Do research for hackathon',
+      isCompleted: false,
+    },
+    {
+      text:'Take Son to art class',
+      iscompleted: false,
+    },
+    {
+      text:'Do laundry',
+      isCompleted: false,
+    },
+    {
+      text: 'Prepare dinner',
+      isCompleted: false,
+    },
+    {
+      text: 'Read the Word',
+      isCompleted: false,
+    }
   ]);
 
-  const addTodo = text => {
-    const newTodos = [...todos, {text, isCompleted:false}];
-    setTodos(newTodos);
-  }
-  const removeTodo = e => {
-    var index = Number(e.target.id);
-    let temp = [...todos];    
-    temp.splice(index, 1);
-    setTodos(temp);
-  }
-
+const addTodo = text => {
+  const newTodos = [...todos, {text, isCompleted:false}];
+  setTodos(newTodos);
+}
+const removeTodo = index => {
+    let temp = [...todos];
+  temp.splice(index, 1);
+  setTodos(temp);
+}
   return(
     <>
-      {todos.map((todo, i) => (
-        <div className="todo" key={i} id={i} onClick={removeTodo}>{todo.text}</div>
-      ))}
-      <TodoForm addTodo={addTodo} />
+      {todos.map((todo, i) =>
+          <Todo index={i} key={i} todo={todo} remove={removeTodo}/>)}
+       <TodoForm addTodo={addTodo}/>
     </>
   );
 }

@@ -1,22 +1,21 @@
-// user input - includes validation
 function TodoForm({addTodo}){
-  const [value,setValue] = React.useState('');
-  
-  const handleSubmit = e => {
-    e.preventDefault();
-    if(!value) return;
-    addTodo(value);
-    setValue('');
-  }
+    const [value, setValue] = React.useState('');
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input 
+    const handleSubmit = e => {
+        e.preventDefault();
+        if (!value) return;
+        addTodo(value);
+        setValue('');
+      }
+    return(
+        <form onSubmit={handleSubmit}>
+        <input 
         type="text"
         className="input"
         value={value}
-        placeholder="Add Todo..."
-        onChange={e => setValue(e.target.value)} />
-    </form>
-  )
-}
+        placeholder="Add Todo....."
+        onChange={e => setValue(e.target.value)}
+        />
+      </form>   
+    );
+};
