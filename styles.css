@@ -3,7 +3,7 @@ body {
   font-family: 'Arial';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: cornflowerblue;
+  background-color: #6b5b95;
 }
 
 code {
@@ -13,13 +13,13 @@ code {
 }
 
 .app {
-  background: #209cee;
+  background: #a2b9bc;
   padding: 30px;
   height: 100vh;
 }
 
 .todo-list{
-  background:#b2ad7f;
+  background:#878f99;
   border-radius: 4px;
   padding: 5px;
   max-width: 400px;
@@ -50,5 +50,5 @@ code {
   font-size: 24px;
 }
 h1 {
-color: #ff7b25;
+color: #878f99;
 }
